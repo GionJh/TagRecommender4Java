@@ -1,14 +1,34 @@
-# Tag4J
-A java library for <b>Tag Recommendation</b>
+Description
+Tag4J
+A java library for Tag Recommendation
 
-Libraries used:
+Tag recommendation is the action of recommending new tags to be added to a resource based on the tags the resource already has or
+other information about the resource such as its title.
 
-weka:<br>
-http://www.cs.waikato.ac.nz/ml/weka/downloading.html
+This java library does just that.
 
-apache commons:<br>
-https://commons.apache.org/proper/commons-lang/apidocs/
+Tutorial
 
+Recommender r = new Recommender(1); 
 
-Coming soon...
-WORK in progress.
+List<List<String>> list = new ArrayList<List<String();
+
+List<String> tagSet1 = new ArrayList<String>();
+tagSet1.add("Saturn");
+tagSet1.add("Mars");
+
+List<String> tagSet2 = new ArrayList<String>();
+tagSet2.add("Venus");
+tagSet2.add("Mars");
+
+tagSet2.add("Earth");
+
+list.add(tagSet1);
+list.add(tagSet2);
+
+r.computeRules(list);
+
+List<String> myTags = new ArrayList<String>();
+myTags.add("Mars");
+myTags.add("Pluto");
+List<Sting> suggested = r.suggestTags(myTags,null);
